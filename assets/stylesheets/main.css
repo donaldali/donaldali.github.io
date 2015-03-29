@@ -1,0 +1,225 @@
+/*
+  ========================================
+  Reset
+  ========================================
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+body {
+  background: #eee;
+  color: #666;
+  /*font: 300 16px/22px "Roboto Slab", serif;*/
+  font: 300 16px "Roboto Slab", serif;
+}
+html, body {
+  height: 100%;
+}
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+  ========================================
+  General
+  ========================================
+*/
+header img,
+.home-content img {
+  position: relative;
+  display: block;
+}
+.bg-default {
+  background-color: #fff;
+  position: absolute;
+}
+.bg-sm-default {
+  top: 8px;
+  width: 24px;
+  height: 16px;
+  left: 4px;
+}
+.bg-lg-default {
+  top: 16px;
+  width: 48px;
+  height: 32px;
+  left: 8px;
+}
+
+/*
+  ========================================
+  Header
+  ========================================
+*/
+header {
+  height: 42px;
+  background-color: #ddd;
+  border-bottom: 1px solid #aaa;
+}
+header nav,
+header ul {
+  height: 42px;
+}
+.home-header {
+  border-bottom: none;
+  background-color: transparent;
+}
+
+header li {
+  display: inline-block;
+  padding-right: 20px;
+  vertical-align: top;
+}
+header a {
+  color: #1b1b1b;
+  font-size: 26px;
+  font-weight: 100;
+  height: 42px;
+  line-height: 42px;
+  display: inline-block;
+  text-decoration: none;
+}
+header a:hover {
+  color: #fff;
+}
+header .current {
+  border-bottom: 4px solid #1b1b1b;
+}
+header .current:hover {
+  border-color: #fff;
+}
+.icon-frame {
+  position: relative;
+  overflow: hidden;
+}
+.icon-sm {
+  top: 5px;
+  height: 32px;
+}
+.sm-icon-holder:hover img {
+  top: -32px;
+}
+.home-container {
+  position: relative;
+  height: 100%;
+  min-height: 333px;
+  background-color: #eee;
+  background: url(../images/san-francisco.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.global-container {
+  height: 100%
+}
+.home-header nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*
+  ========================================
+  Home
+  ========================================
+*/
+.home-content {
+  position: absolute;
+  width: 442px;
+  left: 50%;
+  margin-left: -221px;
+  height: 242px;
+  top: 50%;
+  margin-top: -70px;
+}
+.home-content h1,
+.home-content h3 {
+  color: #fff;
+}
+.home-content h1 {
+  font: 800 84px "Alegreya Sans SC", sans-serif;
+
+}
+.home-content h3 {
+  font: 300 34px "Roboto Slab", serif;
+  margin-bottom: 20px;
+}
+.home-content a {
+  display: inline-block;
+}
+.lg-icon-holder:hover img {
+  top: -64px;
+}
+.icon-lg {
+  height: 64px;
+}
+.contact a:first-child {
+  margin-right: 20px;
+}
+.contact a:last-child img {
+  opacity: 0.9;
+}
+.contact {
+  width: 160px;
+  text-align: center;
+  margin: 0 auto;
+}
