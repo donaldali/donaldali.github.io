@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Donald Ali | Portfolio</title>
     <meta charset="utf-8">
-    <title>Donald Ali</title>
-    <link rel="stylesheet" href="assets/stylesheets/main.css">
-    <link rel="icon shortcut" href="assets/images/favicon.ico">
-    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:500,700,800,900|Roboto+Slab:300,100,400' rel='stylesheet' type='text/css'>
+    <meta name="author" content="Donald Ali">
+    <meta name="keywords" content="portfolio, Donald, Ali, developer, web, software, computer, coding, website, webpage">
+    <meta name="description" content="Donald Ali website portfolio">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="icon shortcut" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="assets/stylesheets/main.css" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300|Roboto+Slab:100,300,400' rel='stylesheet' type='text/css'>
   </head>
+
   <body>
     <div class="global-container">
       <div class="portfolio-container">
 
-        <!-- <header class="home-header"> -->
-        <header>
+        <header class="main-header">
           <nav>
             <ul class="horizontal-list">
               <li><a href="index.html">Home</a></li>
@@ -21,7 +26,7 @@
               <li><a href="resume.html">Résumé</a></li>
               <li>
                 <a href="https://github.com/donaldali" class="sm-icon-holder" title="Donald's GitHub">
-                  <div class="icon-frame icon-sm">
+                  <div class="icon-frame icon-sm github-icon">
                     <img src="assets/images/icons/GitHub/black-32.png" alt="black 32px GitHub icon">
                     <img src="assets/images/icons/GitHub/white-32.png" alt="white 32px GitHub icon">
                   </div>
@@ -29,7 +34,7 @@
               </li>
               <li>
                 <a href="mailto:donaldali@yahoo.com" class="sm-icon-holder" title="Email Donald">
-                  <div class="icon-frame icon-sm">
+                  <div class="icon-frame icon-sm email-icon">
                     <div class="bg-default bg-sm-default"></div>
                     <img src="assets/images/icons/email/black-32.png" alt="black 32px email icon">
                     <img src="assets/images/icons/email/white-32.png" alt="white 32px email icon">
@@ -42,29 +47,252 @@
         </header>
 
         <div class="portfolio-content">
-          <p>Portfolio</p>
-<!-- 
-          <h1 class="name">Donald Ali</h1>
-          <h3 class="description">Web developer by the bay</h3>
-          <div class="contact">
-            <a href="https://github.com/donaldali" class="lg-icon-holder" title="Donald's GitHub">
-              <div class="icon-frame icon-lg">
-                <img src="assets/images/icons/GitHub/black-64.png" alt="black 64px GitHub icon">
-                <img src="assets/images/icons/GitHub/white-64.png" alt="white 64px GitHub icon">
+          <h2>Some Things I've Built</h2>
+
+          <div class="row">
+
+            <!-- project 1 -->
+            <article class="project">
+              <div class="project-holder">
+
+                <div class="title">Odinbook</div>
+                <aside class="tech-stack">
+                  <ul>
+                    <li>Ruby</li>
+                    <li>Ruby on Rails</li>
+                    <li>RSpec</li>
+                    <li>TDD</li>
+                    <li>Coffeescript</li>
+                    <li>jQuery</li>
+                    <li>Ajax</li>
+                    <li>Web Sockets</li>
+                    <li>Postgres</li>
+                  </ul>
+                </aside>
+
+                <div class="project-images">
+                  <figure>
+                    <a href="assets/images/odinbook/login-signup.png" class="fancybox" rel="odinbook-group" title="Odinbook Log In/Sign Up Page">
+                      <img src="assets/images/odinbook/login-signup-thumbnail.png" alt="Odinbook Log In/Sign Up Page">
+                      <div class="expand-msg">Click to Expand Image</div>
+                    </a>
+                    <figcaption>Odinbook Log In/Sign Up Page</figcaption>
+                  </figure><!--
+
+               --><figure>
+                    <a href="assets/images/odinbook/plato-timeline.png" class="fancybox" rel="odinbook-group" title="Socrates Viewing Plato's Timeline">
+                      <img src="assets/images/odinbook/plato-timeline-thumbnail.png" alt="Socrates Viewing Plato's Timeline">
+                      <div class="expand-msg">Click to Expand Image</div>
+                    </a>
+                    <figcaption>Socrates Viewing Plato's Timeline</figcaption>
+                  </figure>
+                </div>
+
+                <section class="description">
+                  <p><strong>Developed</strong>: 2015</p>
+                  <p><strong>Contribution</strong>: Solo Developer</p>
+                  <p>
+                    <strong>Description</strong>: 
+                    Odinbook is a clone of Facebook written using TDD and designed to mimic the look and some core features of Facebook including friending, posting, commenting, and liking. Additional features provided include Timeline, Newsfeed, customizable privacy settings, and search.
+                  </p>
+                  <p>
+                    User experience is enhanced in this web application with extensive use of Ajax requests (for everything from creating or deleting a post/comment/like to client side form validation), realtime updates with websockets (reflecting other users' pertinent actions), and infinite scroll.
+                  </p>
+                  <p>
+                    This application uses Devise for authentication and Omniauth integration with the real Facebook as well as Paperclip with AWS S3 storage for images.
+                  </p>
+                  <p>
+                    <strong>More Info</strong>: 
+                    Odinbook is hosted on Heroku at <a href="https://dna-odinbook.herokuapp.com/">dna-odinbook.herokuapp.com</a>; the source code is available <a href="https://github.com/donaldali/odinbook">on GitHub</a>.
+                  </p>
+                </section>
+
               </div>
-            </a>
-            <a href="mailto:donaldali@yahoo.com" class="lg-icon-holder" title="Email Donald">
-              <div class="icon-frame icon-lg">
-                <div class="bg-default bg-lg-default"></div>
-                <img src="assets/images/icons/email/black-64.png" alt="black 64px email icon">
-                <img src="assets/images/icons/email/white-64.png" alt="white 64px email icon">
+            </article><!-- 
+
+            project 2
+         --><article class="project">
+              <div class="project-holder">
+
+                <div class="title">Chess</div>
+                <aside class="tech-stack pad-stack">
+                  <ul>
+                    <li>Ruby</li>
+                    <li>Rspec</li>
+                    <li>TDD</li>
+                  </ul>
+                </aside>
+
+                <div class="project-images">
+                  <figure>
+                    <a href="assets/images/chess/start.png" class="fancybox" rel="chess-group" title="Start of Chess Game">
+                      <img src="assets/images/chess/start-thumbnail.png" alt="Start of Chess Game">
+                      <div class="expand-msg">Click to Expand Image</div>
+                    </a>
+                    <figcaption>Start of Chess Game</figcaption>
+                  </figure><!--
+
+               --><figure>
+                    <a href="assets/images/chess/in-progress.png" class="fancybox" rel="chess-group" title="Useful Feedback in a Chess Game">
+                      <img src="assets/images/chess/in-progress-thumbnail.png" alt="Useful Feedback in a Chess Game">
+                      <div class="expand-msg">Click to Expand Image</div>
+                    </a>
+                    <figcaption>Useful Feedback in a Chess Game</figcaption>
+                  </figure>
+                </div>
+
+                <section class="description">
+                  <p><strong>Developed</strong>: 2014</p>
+                  <p><strong>Contribution</strong>: Solo Developer</p>
+                  <p>
+                    <strong>Description</strong>: 
+                    This is a two-player CLI chess application written using TDD in accordance with the World Chess Federation's Laws of Chess.
+                  </p>
+                  <p>
+                    This application performs detailed checks of a player's attempted move and provides useful feedback when an illegal move is attempted; it also warns when a player's king is in check. All special moves (castling, en passant, promotion, and a pawn's double step on its first move) are allowed in the game.
+                  </p>
+                  <p>
+                    According to Article 5 of the Laws of Chess, a chess game may end in one of seven ways--Checkmate, Resignation (both wins), Stalemate, Dead Position, Agreement, Threefold Repetition, and Fifty Move Rule (all draws). All seven are recognized and implemented in this application. At any time a game may be saved and continued at a later time.
+                  </p>
+                  <p>
+                    <strong>More Info</strong>: 
+                    The source code for this Chess application is available <a href="https://github.com/donaldali/Chess">on GitHub</a>.
+                  </p>
+                </section>
+
               </div>
-            </a>
+            </article>
+
           </div>
-           -->
-        </div>
+
+          <div class="row">
+
+            <!-- project 3 -->
+            <article class="project">
+              <div class="project-holder">
+
+                <div class="title">Where's Waldo</div>
+                <aside class="tech-stack">
+                  <ul>
+                    <li>Ruby</li>
+                    <li>Ruby on Rails</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                    <li>Ajax</li>
+                  </ul>
+                </aside>
+
+                <div class="project-images">
+                  <figure>
+                    <a href="assets/images/wheres-waldo/board-select.png" class="fancybox" rel="waldo-group" title="Where's Waldo Game Board Select">
+                      <img src="assets/images/wheres-waldo/board-select-thumbnail.png" alt="Where's Waldo Game Board Select">
+                      <div class="expand-msg">Click to Expand Image</div>
+                    </a>
+                    <figcaption>Where's Waldo Game Board Select</figcaption>
+                  </figure><!--
+
+               --><figure>
+                    <a href="assets/images/wheres-waldo/in-progress.png" class="fancybox" rel="waldo-group" title="Where's Waldo Game in Progress">
+                      <img src="assets/images/wheres-waldo/in-progress-thumbnail.png" alt="Where's Waldo Game in Progress">
+                      <div class="expand-msg">Click to Expand Image</div>
+                    </a>
+                    <figcaption>Where's Waldo Game in Progress</figcaption>
+                  </figure>
+                </div>
+
+                <section class="description">
+                  <p><strong>Developed</strong>: 2014</p>
+                  <p><strong>Contribution</strong>: Solo Developer</p>
+                  <p>
+                    <strong>Description</strong>: 
+                    Implementation of the children's game Where's Waldo (or Where's Wally) with Rails on the back end and JavaScript on the front end. Offers six boards of increasing difficulty for a player to choose from.
+                  </p>
+                  <p>
+                    This application works similar to a photo tagging application where a player has to "tag" the different Waldo characters on a large board. JavaScript captures a player's character selections then makes an Ajax request to the Rails back end which checks the character selection; finally JavaScript displays feedback. There is also a leaderboard which shows the top 20 scores (measured by how quickly a player finds all Waldo characters) for each board.
+                  </p>
+                  <p>
+                    <strong>More Info</strong>: 
+                    Where's Waldo is hosted on Heroku at <a href="http://dna-wheres-waldo.herokuapp.com/">dna-wheres-waldo.herokuapp.com</a>; the source code is available <a href="https://github.com/donaldali/wheres-waldo">on GitHub</a>.
+                  </p>
+                </section>
+
+              </div>
+            </article><!-- 
+
+            project 4
+         --><article class="project">
+              <div class="project-holder">
+
+                <div class="title">Missile Command</div>
+                <aside class="tech-stack">
+                  <ul>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                    <li>HTML5 Canvas</li>
+                  </ul>
+                </aside>
+
+                <div class="project-images">
+                  <figure>
+                    <a href="assets/images/missile-command/start.png" class="fancybox" rel="missile-group" title="Start of Missile Command Game">
+                      <img src="assets/images/missile-command/start-thumbnail.png" alt="Start of Missile Command Game">
+                      <div class="expand-msg">Click to Expand Image</div>
+                    </a>
+                    <figcaption>Start of Missile Command Game</figcaption>
+                  </figure><!--
+
+               --><figure>
+                    <a href="assets/images/missile-command/in-progress.png" class="fancybox" rel="missile-group" title="Missile Command Game in Progress">
+                      <img src="assets/images/missile-command/in-progress-thumbnail.png" alt="Missile Command Game in Progress">
+                      <div class="expand-msg">Click to Expand Image</div>
+                    </a>
+                    <figcaption>Missile Command Game in Progress</figcaption>
+                  </figure>
+                </div>
+
+                <section class="description">
+                  <p><strong>Developed</strong>: 2014</p>
+                  <p><strong>Contribution</strong>: Solo Developer</p>
+                  <p>
+                    <strong>Description</strong>: 
+                    JavaScript clone of the classic game Missile Command on an HTML5 canvas. Protect six cities with three Anti-Missile batteries from enemy missiles like in the classic game.
+                  </p>
+                  <p>
+                    This application uses JavaScript to draw each element of the game (missiles, missile paths, cities, anti-missile batteries, explosions) on an HTML5 canvas for each game frame. Some geometry is then used to calculate where each moving game element (like missiles) need to be on the next game frame to maintain a smooth animation. Each game level produces more enemy missiles that travel faster making for increasingly harder game levels.
+                  </p>
+                  <p>
+                    <strong>More Info</strong>: 
+                    You may <a href="http://htmlpreview.github.io/?https://github.com/donaldali/odin-js-jquery/blob/master/missile_command/index.html">play Missile Command here</a>; the source code is available <a href="https://github.com/donaldali/odin-js-jquery/tree/master/missile_command">on GitHub</a>.
+                  </p>
+                </section>
+
+              </div>
+            </article>
+
+          </div>
+
+          <article class="other-projects">
+            <h4>Some Other Things I've Built</h4>
+
+            <p>
+              <a href="https://github.com/donaldali/odin-ruby/tree/master/project_oop/mastermind">Mastermind</a>, <a href="https://github.com/donaldali/odin-ruby/tree/master/project_rspec_testing/connect_four_tdd">Connect Four</a>, and more Ruby projects can be found <a href="https://github.com/donaldali/odin-ruby">Here</a>.
+            </p>
+            <p>
+              A <a href="https://github.com/donaldali/odin-flight-booker">Flight Booker</a> (<a href="http://dna-flight-booker.herokuapp.com/">on Heroku here</a>), <a href="https://github.com/donaldali/odin-rails/tree/master/project_sql">SQL project</a>, and more Ruby on Rails projects can be found <a href="https://github.com/donaldali/odin-rails">Here</a>.
+            </p>
+            <p>
+              <a href="https://github.com/donaldali/odin-js-jquery/tree/master/minesweeper">Minesweeper</a> (<a href="http://htmlpreview.github.io/?https://github.com/donaldali/odin-js-jquery/blob/master/minesweeper/index.html">play here</a>), working with <a href="https://github.com/donaldali/odin-js-jquery/tree/master/ajax_infinite_scroll">APIs and Ajax</a>, and more JavaScript projects can be found <a href="https://github.com/donaldali/odin-js-jquery">Here</a>.
+            </p>
+          </article>
+
+
+        </div> <!-- end .portfolio-content -->
 
       </div>
     </div>
+
+    <script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="assets/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="assets/js/application.js"></script>
   </body>
 </html>

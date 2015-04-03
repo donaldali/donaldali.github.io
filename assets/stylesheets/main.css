@@ -57,14 +57,22 @@ table {
   Custom styles
   ========================================
 */
-body {
-  background: #eee;
-  color: #666;
-  /*font: 300 16px/22px "Roboto Slab", serif;*/
-  font: 300 16px "Roboto Slab", serif;
-}
-html, body {
+html, 
+body,
+.global-container {
   height: 100%;
+}
+body {
+  font: 300 16px/24px "Roboto Slab", serif;
+  color: #555;
+  background: #dcdcdc;
+  background: #f3f6f9;
+  min-width: 500px;
+}
+header {
+  height: 42px;
+  border-bottom: 1px solid #69c;
+  background-color: #abd;
 }
 
 /*
@@ -90,6 +98,13 @@ header img,
   position: relative;
   display: block;
 }
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: 400;
+  color: #666;
+}
 .bg-default {
   background-color: #fff;
   position: absolute;
@@ -112,27 +127,29 @@ header img,
   Header
   ========================================
 */
-header {
-  height: 42px;
-  background-color: #ddd;
-  border-bottom: 1px solid #aaa;
-}
 header nav,
 header ul {
   height: 42px;
+}
+header nav {
+  float: right;
 }
 .home-header {
   border-bottom: none;
   background-color: transparent;
 }
-
+.main-header {
+  background: -webkit-linear-gradient(#69c, #abd);
+  background:    -moz-linear-gradient(#69c, #abd);
+  background:         linear-gradient(#69c, #abd);
+}
 header li {
   display: inline-block;
   padding-right: 20px;
   vertical-align: top;
 }
 header a {
-  color: #1b1b1b;
+  color: #333;
   font-size: 26px;
   font-weight: 100;
   height: 42px;
@@ -144,10 +161,16 @@ header a:hover {
   color: #fff;
 }
 header .current {
-  border-bottom: 4px solid #1b1b1b;
+  border-bottom: 3px solid #333;
 }
 header .current:hover {
   border-color: #fff;
+}
+.github-icon.icon-sm {
+  opacity: 0.82;
+}
+.email-icon.icon-sm {
+  opacity: 0.75;
 }
 .icon-frame {
   position: relative;
@@ -159,22 +182,6 @@ header .current:hover {
 }
 .sm-icon-holder:hover img {
   top: -32px;
-}
-.home-container {
-  position: relative;
-  height: 100%;
-  min-height: 333px;
-  background-color: #eee;
-  background: url(../images/san-francisco.jpg) no-repeat center center fixed;
-  background-size: cover;
-}
-.global-container {
-  height: 100%
-}
-.home-header nav {
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 /*
@@ -197,7 +204,7 @@ header .current:hover {
 }
 .home-content h1 {
   font: 800 84px "Alegreya Sans SC", sans-serif;
-
+  word-spacing: 5px;
 }
 .home-content h3 {
   font: 300 34px "Roboto Slab", serif;
@@ -205,6 +212,20 @@ header .current:hover {
 }
 .home-content a {
   display: inline-block;
+}
+.home-container {
+  position: relative;
+  height: 100%;
+  min-height: 333px;
+  min-width: 550px;
+  background-color: #eee;
+  background: url(../images/san-francisco.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.home-header nav {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .lg-icon-holder:hover img {
   top: -64px;
@@ -222,4 +243,254 @@ header .current:hover {
   width: 160px;
   text-align: center;
   margin: 0 auto;
+}
+
+/*
+  ========================================
+  Portfolio
+  ========================================
+*/
+.portfolio-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.portfolio-content h2 { 
+  font: 300 52px/72px "Alegreya Sans SC", sans-serif;
+  color: #666;
+  border-bottom: 1px solid #999;
+  margin: 0 2%;
+  padding-left: 1%;
+  letter-spacing: -2px;
+  word-spacing: 5px;
+}
+.portfolio-content p {
+  margin-bottom: 20px;
+}
+.portfolio-content a {
+  color: #0088cc;
+  text-decoration: none;
+}
+.portfolio-content a:hover {
+  text-decoration: underline;
+}
+.portfolio-content strong {
+  font-size: 18px;
+}
+.project {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 50px;
+}
+.project-holder {
+  padding: 2%;
+  border: 1px solid #999;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+.project:first-child {
+  padding-left: 2%;
+  padding-right: 1%;
+}
+.project:last-child {
+  padding-left: 1%;
+  padding-right: 2%;
+}
+.title {
+  font: 100 42px/54px "Roboto Slab", serif;
+  color: #666;
+}
+.tech-stack {
+  margin-bottom: 20px;
+}
+.tech-stack li {
+  display: inline-block;
+  background-color: #666;
+  color: #fff;
+  font-weight: 100;
+  padding: 3px 7px;
+  margin-right: 5px;
+  margin-bottom: 7px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+.pad-stack {
+  margin-bottom: 54px;
+}
+.project-images figure {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+  position: relative;
+}
+.project-images figure:first-child {
+  margin-right: 1%;
+}
+.project-images figure:last-child {
+  margin-left: 1%;
+}
+.project-images a {
+  display: block;
+  width: 100%;
+}
+.project-images a:hover .expand-msg {
+  display: block;
+}
+.project-images img {
+  display: block;
+  width: 100%;
+  border: 1px solid #999;
+}
+.expand-msg {
+  position: absolute;
+  bottom: 30px;
+  background-color: #666;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  display: none;
+}
+.project-images figcaption {
+  font-size: 12px;
+  font-style: italic;
+}
+.description {
+  margin-top: 15px;
+}
+.other-projects {
+  max-width: 750px;
+  padding: 50px 2%;
+  margin-left: 1%;
+}
+.other-projects h4 {
+  font: 300 32px/42px "Alegreya Sans SC", sans-serif;
+  color: #666;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+  word-spacing: 3px;
+}
+.other-projects a {
+  color: #0088cc;
+  text-decoration: none;
+}
+.other-projects a:hover {
+  text-decoration: underline;
+}
+
+/*
+  ========================================
+  Responsive Styling
+  ========================================
+*/
+@media screen and (max-width: 1000px) {
+  .portfolio-content h2 {
+    padding-left: 2%;
+  }
+  .project {
+    width: 100%;
+  }
+  .project-holder {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #999;
+  }
+  .project:first-child,
+  .project:last-child {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .pad-stack {
+    margin-bottom: 20px;
+  }
+  .description {
+    max-width: 750px;
+  }
+  .other-projects {
+    margin-left: 2%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio-content {
+    margin: 0 1%;
+  }
+  .portfolio-content h2 {
+    margin: 0;
+    padding: 0;
+  }
+  .project-holder {
+    padding: 0;
+  }
+  .project:first-child,
+  .project:last-child {
+    padding: 0;
+  }
+  .project-images figure {
+    width: 100%;
+  }
+  .project-images figure:first-child {
+    margin-right: 0;
+    display: none;
+  }
+  .project-images figure:last-child {
+    margin-left: 0;
+  }
+  .other-projects {
+    padding: 50px 0;
+    margin-left: 0;
+  }
+}
+
+/*
+  ========================================
+  Resume
+  ========================================
+*/
+.resume-content {
+  width: 800px;
+  margin: 0 auto;
+}
+.resume-content {
+  padding-bottom: 30px;
+}
+.resume-content h4 {
+  color: #666;
+  font: 500 22px "Alegreya Sans SC", sans-serif;
+  border-bottom: 1px solid #999;
+  margin-top: 20px;
+  margin-bottom: 3px;
+}
+.resume-content a {
+  color: #0088cc;
+  text-decoration: none;
+}
+.resume-content a:hover {
+  text-decoration: underline;
+}
+.resume-content li {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 40px;
+}
+.contact-info {
+  text-align: center;
+}
+.contact-info h3 {
+  font: 500 26px/32px "Alegreya Sans SC", sans-serif;
+  margin-top: 20px;
+  word-spacing: 5px;
+}
+.education div {
+  margin-top: 15px;
+}
+.education div:first-of-type {
+  margin-top: 0;
+}
+.employment-date {
+  float: right;
+}
+.job-title {
+  padding: 2px 0;
 }
