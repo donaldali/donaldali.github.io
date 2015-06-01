@@ -485,7 +485,11 @@ header .current:hover {
 .education div {
   margin-top: 15px;
 }
-.education div:first-of-type {
+.employment div {
+  margin-top: 20px;
+}
+.education div:first-of-type,
+.employment div:first-of-type {
   margin-top: 0;
 }
 .employment-date {
